@@ -1,0 +1,5 @@
+{%- if site.site_titles and page.lang and site.site_titles[page.lang] -%}
+  {{ site.site_titles[page.lang] }}
+{%- else -%}
+  {{ site.title }}
+{%- endif -%}

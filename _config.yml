@@ -1,0 +1,36 @@
+title: 2025-27 Szakdolgozat
+description: Gamifikált Önfejlesztő Webalkalmazás – dokumentáció
+theme: just-the-docs
+
+# Sidebar title per language (see _includes/title.html)
+site_titles:
+  hu: 2025-27 Szakdolgozat
+  en: 2025-27 Thesis
+
+# Search covers both languages
+search_enabled: true
+heading_anchors: true
+color_scheme: light
+
+footer_content: "Gamifikált Önfejlesztő Webalkalmazás · 2025-27"
+
+# Every page in hu/ and en/ gets its language automatically
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "hu"
+    values:
+      lang: hu
+  - scope:
+      path: "en"
+    values:
+      lang: en
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,12 @@
+{%- if page.ref and page.lang -%}
+  {%- assign counterpart = site.html_pages | where: "ref", page.ref | where_exp: "p", "p.lang != page.lang" | first -%}
+  <nav aria-label="Language" class="lang-switch">
+    {%- if page.lang == "hu" -%}
+      <span class="lang-current" aria-current="true">HU</span>
+      {%- if counterpart %}<a href="{{ counterpart.url | relative_url }}" lang="en" hreflang="en" title="English">EN</a>{% endif -%}
+    {%- else -%}
+      {%- if counterpart %}<a href="{{ counterpart.url | relative_url }}" lang="hu" hreflang="hu" title="Magyar">HU</a>{% endif -%}
+      <span class="lang-current" aria-current="true">EN</span>
+    {%- endif -%}
+  </nav>
+{%- endif -%}
