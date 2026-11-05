@@ -1,0 +1,1 @@
+# Persona Studio Addon for Blender

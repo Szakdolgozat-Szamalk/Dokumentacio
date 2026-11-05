@@ -33,3 +33,76 @@
     background-color: $link-color;
   }
 }
+
+.notes-container {
+  margin-top: 1.5rem;
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .notes-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+
+    .note-btn {
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      background-color: $feedback-color; 
+      color: $link-color;
+      border: 1px solid rgba(0,0,0,0.05);
+      transition: all 0.2s ease;
+
+      &:hover {
+        background-color: darken($feedback-color, 5%);
+      }
+    }
+  }
+
+  .note-pane {
+    display: none;
+    padding: 1.5rem;
+    background: $code-background-color;
+    border-radius: 6px;
+    border: 1px solid $border-color;
+    margin-top: 1rem;
+  }
+
+  /* Aktív állapotok kezelése */
+  #tab-graphql:checked ~ .notes-tabs label[for="tab-graphql"] {
+    background-color: $link-color;
+    color: $white;
+  }
+  #tab-graphql:checked ~ .notes-content #pane-graphql {
+    display: block;
+  }
+
+  #tab-testing:checked ~ .notes-tabs label[for="tab-testing"] {
+    background-color: $link-color;
+    color: $white;
+  }
+  #tab-testing:checked ~ .notes-content #pane-testing {
+    display: block;
+  }
+
+  #tab-personastudio:checked ~ .notes-tabs label[for="tab-personastudio"] {
+    background-color: $link-color;
+    color: $white;
+  }
+  #tab-personastudio:checked ~ .notes-content #pane-personastudio {
+    display: block;
+  }
+
+  #tab-pwa:checked ~ .notes-tabs label[for="tab-pwa"] {
+    background-color: $link-color;
+    color: $white;
+  }
+  #tab-pwa:checked ~ .notes-content #pane-pwa {
+    display: block;
+  }
+}
